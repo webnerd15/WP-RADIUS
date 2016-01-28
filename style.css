@@ -1,0 +1,28 @@
+/*
+  Theme Name: WP-RADIUS
+  Theme URI: http://webnerdtz.com
+  Description: A theme that provides yard management application
+  Author: Benjamin Kisaki
+  Author URI: http://webnerdtz.com
+  Version: 0.1
+*/
+@import url('bootstrap/css/bootstrap.min.css');
+
+#overlayer{
+	position:absolute;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	background:rgba(0,0,0,.5);
+	z-index:1000;
+	display:none;
+	overflow:scroll;
+}
+#overlayer-content{
+	background:white;
+	padding:20px;
+	width:40%;
+	margin: 100px auto;
+	border-radius:5px;
+}

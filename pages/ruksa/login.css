@@ -1,0 +1,13 @@
+body{
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:smaller;
+}
+#container{
+	width:320px;
+	margin:auto;padding:10px;border:thin solid #ccc;
+	border-radius:10px;
+	background: #eee;
+}
+input[type=text], input[type=password], input[type=email],select{padding:5px;width:300px;margin:10px;;display:block;}
+h3{text-align:center;}
+hr{border:thin solid #69f;}
