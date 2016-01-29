@@ -2,6 +2,7 @@
 	<h4 id="form-title"></h4>
 	<hr/>
 	<form role="form">
+		<input type="hidden" name="nas_id" id="nas_id" ng-model="nas_id" />
 		<div class="form-group">
 			<label for="shortname">Name:</label>
 			<input type="text" class="form-control" id="shortname" ng-model="shortname">
@@ -22,8 +23,8 @@
 			<label for="description">Description</label>
 			<input type="description" class="form-control" id="description" ng-model="description">
 		</div>
-		<button class="btn btn-default" id="add-btn"><i class="fa fa-plus"></i> Add</button> 
-		<button class="btn btn-default" id="save-btn"><i class="fa fa-save"></i> Save</button>
+		<button class="btn btn-default" id="add-btn" ng-click="addNas()"><i class="fa fa-plus"></i> Add</button> 
+		<button class="btn btn-default" id="save-btn" ng-click="updateNas()"><i class="fa fa-save"></i> Save</button>
 		<button class="btn btn-default" ng-click="closeNasForm()"><i class="fa fa-close"></i> Close</button>
 	</form>
 </div>

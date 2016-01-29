@@ -1,5 +1,4 @@
 <?php
-include('utils.php');
 
 global $wpdb;
 

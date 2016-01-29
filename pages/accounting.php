@@ -1,8 +1,4 @@
 <?php
-/*
- * Template Name: User Accounting
- */
-include('utils.php');
 
 global $wpdb;
 
@@ -10,7 +6,7 @@ $thedate = (!isset($_GET["date"]) ? 'CURRENT_DATE' : $_GET["date"]);
 
 $sql = "SELECT * FROM userinfo 
         LEFT JOIN ".RADACCT." ON userinfo.username=".RADACCT.".username 
-        WHERE ".RADACCT.".acctstarttime>=$thedate 
+        WHERE ".RADACCT.".acctstarttime >= $thedate OR ".RADACCT.".acctstoptime <= $thedate
         ORDER BY ".RADACCT.".radacctid DESC";
 $users = $wpdb->get_results($sql);
 

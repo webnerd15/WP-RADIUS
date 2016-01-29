@@ -3,7 +3,6 @@
 /*
  * BACK END SEARCHING
  */
-include('utils.php'); 
 
 if(isset($_GET['key'])):
     $keyword = $_GET['key'];

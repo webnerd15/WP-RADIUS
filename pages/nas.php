@@ -1,5 +1,4 @@
 <?php
-include('utils.php');
 
 global $wpdb;
 
@@ -19,11 +18,17 @@ $nases = $wpdb->get_results($sql);
 
 <div ng-app="nasApp" ng-controller="nasController">
 
+<div id="informer">
+	
+</div>
+
 <div id="overlayer">
 	<div id="overlayer-content">
 		<?php include_once('forms/nas.form.php'); ?>
 	</div>
 </div>
+
+<div>
 
 <div class="col-md-12">
 
@@ -41,8 +46,10 @@ $nases = $wpdb->get_results($sql);
 	</form>
 </div>
 <hr/>
+</div>
 
-<div>
+
+<div class="col-md-9">
                 <table class="table table-hover table-bordered">
                     <thead>
                         <tr>
@@ -58,7 +65,7 @@ $nases = $wpdb->get_results($sql);
 							<td><?php echo $nas->type; ?></td>
                             <td><?php echo $nas->description; ?></td>
                             <td>
-								<a href=""><i class="fa fa-edit"></i> Edit</a>
+								<a href="#" ng-click="getOneNas(<?php echo $nas->id; ?>)"><i class="fa fa-edit"></i> Edit</a>
 							</td>
                         </tr>
                         <?php endforeach; ?>
@@ -70,6 +77,16 @@ $nases = $wpdb->get_results($sql);
 ?>
 </div> 
 </div> 
-</div>        
+
+<div class="col-md-3">
+	<h4><i class="fa fa-info"></i> Quick info!</h4>
+	<hr/>
+	<p>Network Access Servers are routers installed and configured are RADIUS clients in client premises. The main function of these
+		routers is to provide users a hotspot for them to authenticate and access the internet.
+	</p>
+</div>
+
+</div>  
+      
 </div>         
 <script src="<?php echo TEMPL_PATH; ?>/pages/apps/nas.app.js"></script>

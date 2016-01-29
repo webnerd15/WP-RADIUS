@@ -7,6 +7,8 @@
         <?php get_header(); ?>
         <div class="content">
             <?php 
+				include_once('inc/utils.php');
+			
                 switch($_GET['p']):
                     case 'n':
                         include_once('pages/nas.php');
@@ -19,6 +21,12 @@
 						break;
 					case 's':
 						include_once('pages/search.php');
+						break;
+					case 'g':
+						include_once('pages/groups.php');
+						break;
+					case 'c':
+						include_once('pages/settings.php');
 						break;
                     default:
                         include_once('pages/dash.php');

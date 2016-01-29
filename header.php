@@ -34,7 +34,8 @@
 								<li><a href="<?php echo get_bloginfo('url'); ?>/?p=a"><i class="fa fa-database"></i> Accounting</a></li>
 								<li><a href="<?php echo get_bloginfo('url'); ?>/?p=n"><i class="fa fa-wifi"></i> NAS</a></li>
 								<li><a href="<?php echo get_bloginfo('url'); ?>/?p=u"><i class="fa fa-users"></i> Users</a></li>
-								<li><a href="<?php echo get_bloginfo('url'); ?>/?p=s"><i class="fa fa-gear"></i> Settings</a></li>
+								<li><a href="<?php echo get_bloginfo('url'); ?>/?p=g"><i class="fa fa-users"></i> Groups</a></li>
+								<li><a href="<?php echo get_bloginfo('url'); ?>/?p=c"><i class="fa fa-gear"></i> Settings</a></li>
 								<?php $current_user = get_userdata($cur_user_id); ?>
 								<li><a style="border-left:solid thin grey;" href="<?php echo wp_logout_url(get_bloginfo('url')); ?>"><i class="fa fa-user"></i> logout &raquo;</a>
 								 </li>
